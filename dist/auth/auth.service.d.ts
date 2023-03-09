@@ -1,8 +1,8 @@
-import { AuthService } from './auth.service';
+import { PrismaService } from '../prisma/prisma.service';
 import { AuthDto } from './dto';
-export declare class AuthController {
-    private authService;
-    constructor(authService: AuthService);
+export declare class AuthService {
+    private prisma;
+    constructor(prisma: PrismaService);
     signup(dto: AuthDto): Promise<import(".prisma/client").User>;
     signin(dto: AuthDto): Promise<import(".prisma/client").User>;
 }
