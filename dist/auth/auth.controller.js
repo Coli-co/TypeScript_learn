@@ -14,6 +14,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthController = void 0;
 const common_1 = require("@nestjs/common");
+const enums_1 = require("@nestjs/common/enums");
 const auth_service_1 = require("./auth.service");
 const dto_1 = require("./dto");
 let AuthController = class AuthController {
@@ -35,6 +36,7 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], AuthController.prototype, "signup", null);
 __decorate([
+    (0, common_1.HttpCode)(enums_1.HttpStatus.OK),
     (0, common_1.Post)('signin'),
     __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
